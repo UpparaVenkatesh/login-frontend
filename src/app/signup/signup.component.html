@@ -1,0 +1,31 @@
+<div id="sa">
+    <h2>Account Create</h2>
+    <form [formGroup]="loginRef" (ngSubmit)="signUp()" action="save">
+        <!-- <label>EmailId</label>
+        <input type="email" formControlName="emailid"/><br/>
+        <label>Password</label>
+        <input type="password" formControlName="password"/><br/> -->
+        <div style="margin-left:350px;">
+            <table>
+                <tr><td>User Id :<td><input type=text placeholder="Enter User name" formControlName="emailid" required name=t1 size=150></tr>
+    
+               <tr><td>Password:<td>
+                <!-- <label for="psw">Password</label> -->
+                <input type="password" placeholder="Enter Password" formControlName="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                <!-- <input type="password"  placeholder="Enter Password" pattern=".{8,16}" title="8 or more Character" size=30 pattern="[!@#$%^&*][a-z][A-Z][0-9]" formControlName="password"  required name=t1 size=150 ></tr>   -->
+            </table>
+        </div>
+        <label>TypeOfUser</label><br>
+        <input type="radio" name="typeOfUser" value="admin" formControlName="typeOfUser"/>admin
+        <input type="radio" name="typeOfUser" value="user" formControlName="typeOfUser"/>user<br/>
+        <!-- <input type="submit" value="signUp"/>
+        <input type="reset" value="reset"/> -->
+        <button class="btn btn-danger">Register</button>
+        <button class="btn btn-success" input type="reset">reset</button>
+
+    </form>
+    <br/>
+    <span style="color:azure">{{msg}}</span><br/>
+    <a class="btn btn-primary" routerLink="/login">login</a>
+</div>
+

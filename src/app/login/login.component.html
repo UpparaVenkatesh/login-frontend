@@ -1,0 +1,29 @@
+<div id="abcd">
+    <h2>Login Page</h2>
+    <form [formGroup]="loginRef" (ngSubmit)="signIn()" action="save">
+        <!-- <label>UserId</label> -->
+        <!-- <input type="email" formControlName="emailid"/><br/>
+        <label>Password</label>
+        <input type="password" formControlName="password"/><br/> -->
+        <div style="margin-left:350px;">
+          <table>
+            <tr><td>User Id :<td><input type=text placeholder="Enter User name" formControlName="emailid" required name=t1 size=150></tr>
+
+           <tr><td>Password:<td><input type="password" placeholder="Enter Password" formControlName="password"  required name=t1 size=150></tr>  
+          </table>
+        </div>
+        <label>TypeOfUser</label><br>   
+        <input type="radio" name="typeOfUser" value="admin" formControlName="typeOfUser"/> admin 
+        <input type="radio" name="typeOfUser" value="user" formControlName="typeOfUser"/> user<br/>
+        <!-- <input type="submit" value="signIn"/>
+        <input type="reset" value="reset"/><br> -->
+        <button class="btn btn-danger">signIn</button>
+        <button class="btn btn-success" input type="reset">reset</button><br>
+
+        <a routerLink="/forgotpw">forgotpassword</a><br>
+
+    </form><br/>
+    <span style="color:rgb(0, 255, 221)">{{msg}}</span><br/>
+    <a class="btn btn-primary" routerLink="/signUp">SignUp</a>
+    
+</div>

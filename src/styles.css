@@ -1,0 +1,24 @@
+img-responsive{
+
+    height: 40px;
+    
+    width: 80px;
+    
+    }
+    
+    body{
+    
+      height: 600;
+    
+      color: blue;
+    
+      background-image: url("assets/pic.jpg");
+    
+      background-size: 80%;
+    
+      background-size: cover;
+    
+    
+    
+    
+    }
